@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- 모바일브라우저의 화면크기(viewport)를 장치의 가로에 맞추고 초기확대비율은 1로 하며 축소시 기본값은 0.25이므로 1로 설정 maximum-scale은 기본값으로 디바이스가 허용하는 한 확대
+    user-scalable=no는 ios에서 막혀있으므로 사용불가  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <!-- ios 전화번호형식 링크방지 -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="한화리조트 통합사이트 입니다. 객실 및 부대시설 안내, 회원권 분양, 온라인 예약, 여행정보를 제공합니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="hanwharesort">
+    <meta property="og:url" content="http://nanmolayo.dothome.co.kr/mHanwharesort/">
+    <meta property="og:image" content="http://nanmolayo.dothome.co.kr/mHanwharesort/images/hanwharesort_og.png">
+    <meta property="og:description" content="한화리조트 통합사이트 입니다. 객실 및 부대시설 안내, 회원권 분양, 온라인 예약, 여행정보를 제공합니다.">
+    <title>한화리조트모바일</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico?v=1">
+    <!-- 모바일 브라우저홈화면추가시 아이콘 -->
+    <link rel="apple-touch-icon" href="images/app_home.jpg">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- 라이브러리용 css는 수정하지않으므로 타임스템프 붙이지않음 -->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+</head>
+<body>
+    <!-- 모바일 voice over등의 스크린 리더 사용시 필요함 -->
+    <div id="skipNavi">
+        <a href="#container">본문바로가기</a>
+    </div>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="한화리조트"></a></h1>
+            <a class="btn_open" href="#">메뉴열기</a>
+            <div class="dimm"></div>
+            <aside class="gnb_box">
+                <div class="util_menu">
+                    <h2 class="logo_navigation"><a href="index.html"><img src="images/logo_navigation.png" alt="네비게이션 로고"></a></h2>
+                    <div class="welcome">
+                        <p>한화리조트를<br>방문해주셔서 감사합니다. </p>
+                    </div>
+                    <div class="login">
+                        <a href="login.html">로그인</a>
+                        <a href="#">회원가입</a>
+                    </div>
+                </div>
+                <ul class="btn_membership">
+                    <li><a href="#">H-LIVE멤버십</a></li>
+                    <li><a href="#">회원권 안내</a></li>
+                </ul>
+                <div class="gnb_wrap">
+                    <nav class="gnb">
+                        <ul class="depth1">
+                            <li>
+                                <a href="#">통합예약</a>
+                                <ul class="depth2">
+                                    <li class="double"><a href="#">온라인예약</a></li>
+                                    <li><a href="reservation.html">객실예약</a></li>
+                                    <li><a href="reservation.html">예약변경/취소</a></li>
+                                    <li><a href="reservation.html">패키지예약</a></li>
+                                    <li><a href="reservation.html">사이판월드리조트예약접수</a></li>
+                                    <li><a href="reservation.html">제휴리조트리조트예약접수</a></li>
+                                    <li><a href="reservation.html">단체행사예약</a></li>
+                                    <li><a href="reservation.html">쿠폰예약</a></li>
+                                    <li><a href="reservation.html">고객사예약</a></li>
+                                    <li><a href="reservation.html">골프예약</a></li>
+                                    <li><a href="reservation.html">렌터카예약</a></li>
+                                    <li class="double"><a href="#">분양회원추천접수</a></li>
+                                    <li><a href="#">추첨접수</a></li>
+                                    <li><a href="#">추첨접수조회/변경/취소</a></li>
+                                    <li><a href="#">추첨결과보기</a></li>
+                                    <li><a href="#">추첨일정표</a></li>
+                                    <li><a href="#">추첨접수방</a></li>
+                                    <li><a href="#">추첨배정기준</a></li>
+                                    <li><a href="#">회원서비스안내</a></li>
+                                    <li>&nbsp;</li>
+                                    <li class="double"><a href="#">잔여객실조회</a></li>
+                                    <li class="double"><a href="#">조식예약</a></li>
+                                    <li class="double"><a href="#">테마파크입장권구매</a></li>
+                                    <li class="double"><a href="#">날씨정보</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">리조트&테마파크</a>
+                                <ul class="depth2">
+                                    <li class="double"><a href="#">리조트</a></li>
+                                    <li><a href="#">거제벨버디어</a></li>
+                                    <li><a href="#">대천파로스</a></li>
+                                    <li><a href="#">산정호수안시</a></li>
+                                    <li><a href="#">설악별관</a></li>
+                                    <li><a href="#">양평</a></li>
+                                    <li><a href="#">제주</a></li>
+                                    <li><a href="#">해운대</a></li>
+                                    <li><a href="#">경주</a></li>
+                                    <li><a href="#">백암온천</a></li>
+                                    <li><a href="#">설악쏘라노</a></li>
+                                    <li><a href="#">수안보온천</a></li>
+                                    <li><a href="#">용인베잔송</a></li>
+                                    <li><a href="#">평창</a></li>
+                                    <li>&nbsp;</li>
+                                    <li class="double"><a href="#">호텔</a></li>
+                                    <li><a href="#">여수벨메르</a></li>
+                                    <li><a href="#">사이판</a></li>
+                                    <li><a href="#">더플라자</a></li>
+                                    <li>&nbsp;</li>
+                                    <li class="double"><a href="#">테마파크</a></li>
+                                    <li><a href="#">설악워터피아</a></li>
+                                    <li><a href="#">뽀로로아쿠아빌리지</a></li>
+                                    <li><a href="#">제이드가든</a></li>
+                                    <li><a href="#">아쿠아플라넷</a></li>
+                                    <li><a href="#">63스퀘어</a></li>
+                                    <li><a href="#">로얄새들승마클럽</a></li>
+                                    <li class="double"><a href="#">제휴리조트</a></li>
+                                    <li><a href="#">강원엘리시아 강촌</a></li>
+                                    <li><a href="#">제주지역 골프&리조트</a></li>
+                                    <li><a href="#">휘닉스평창</a></li>
+                                    <li>&nbsp;</li>
+                                </ul>
+                            </li>
+                            <li class="notline">
+                                <a href="#">리조트스토리</a>
+                                <ul class="depth2">
+                                    <li class="double"><a href="#">이슈 인 리조트</a></li>
+                                    <li class="double"><a href="#">마이트립플레너</a></li>
+                                    <li class="double"><a href="#">리조트 푸드트립</a></li>
+                                </ul>
+                            </li>
+                            <li class="notline">
+                                <a href="#">이벤트&패키지</a>
+                                <ul class="depth2">
+                                    <li class="double"><a href="package.html">이벤트</a></li>
+                                    <li class="double"><a href="package.html">패키지</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                   </nav>
+                   <ul class="link">
+                       <li><a href="notice.html">공지사항</a></li>
+                       <li><a href="#">예약확인/취소</a></li>
+                   </ul>
+                   <div class="lang">
+                       <a href="#">KOR</a>
+                       <a href="#">ENG</a>
+                   </div>
+                </div>
+            </aside>
+            <button class="btn_close" type="button"></button>
+        </header>
+        <div id="container" class="package_container">
+            <div class="sub_tit">
+                <h2>패키지</h2>
+            </div>
+            <div class="contents">
+                <div class="search_box">
+                    <form>
+                    <fieldset>
+                        <legend>패키지 검색</legend>
+                        <div class="col">
+                            <div class="select_wrap">
+                                <select title="지점선택">
+                                    <option>전체</option>
+                                    <option>쏘라노</option>
+                                    <option>설악</option>
+                                    <option>백암온천</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="input_wrap">
+                                <input type="text" class="input_text select_date" id="item_date01" placeholder="시작일" autocomplete="off" title="기간조회" name="searchStrStartDate" value="" readonly="">
+                            </div>
+                            <span class="txt">~</span>
+                            <div class="input_wrap">
+                                <input type="text" class="input_text select_date" id="item_date02" placeholder="종료일" autocomplete="off" title="기간조회" name="searchStrEndDate" value="" readonly="">
+                            </div>
+                        </div>
+                        <button type="button" class="btn_search">검색</button>
+                    </fieldset>
+                    </form>
+                </div>
+                <div class="event_package_wrap">
+                    <span class="package_tit">총 18건</span>
+                    <ul class="list_package">
+                        <li>
+                            <a href="#">
+                                <div class="img_box">
+                                    <img src="images/package_images/ball_trip.jpg" alt="볼링">
+                                    <span class="package_label">대천파로스</span>
+                                </div>
+                                <div class="txt_box">
+                                    <h3>시원하게 스트라이크패키지</h3>
+                                    <p>남녀노소 누구나 재미있게 즐길 수 있는 락볼링! 리리스 블루 카페 아메리카노 까지
+                                    <br>진행기간:2021.05.11 - 2021.05.31
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img_box">
+                                    <img src="images/package_images/solo_trip.jpg" alt="메이데이 프로모션">
+                                    <span class="package_label">거제 외11곳</span>
+                                </div>
+                                <div class="txt_box">
+                                    <h3>Oh my may day 프로모션</h3>
+                                    <p>당신을 위한 특가선물받으러 떠나볼까요~
+                                    <br>진행기간:2021.05.10 - 2021.05.18
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img_box">
+                                    <img src="images/package_images/gangwon_trip.jpg" alt="싹쓰리 강원">
+                                    <span class="package_label">설악 외2곳</span>
+                                </div>
+                                <div class="txt_box">
+                                    <h3>싹-쓰리 패키지 in 강원</h3>
+                                    <p>가족 3명 모두, 33%할인된 가격, 33시간 동안 주말 내내 느긋하게 강원도를 싹쓸이 해보세요
+                                    <br>진행기간:2021.05.07 - 2021.05.31
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img_box">
+                                    <img src="images/package_images/funkids_trip.jpg" alt="거제 내맘대로 즐기는 funkids여행">
+                                    <span class="package_label">전체</span>
+                                </div>
+                                <div class="txt_box">
+                                    <h3>거제 '내맘대로 즐기는 Fun Kids'</h3>
+                                    <p>키즈 테마시설 1픽
+                                    <br>진행기간:2021.05.06 - 2021.06.30
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img_box">
+                                    <img src="images/package_images/river_trip.jpg" alt="물위에 동동 카누">
+                                    <span class="package_label">전체</span>
+                                </div>
+                                <div class="txt_box">
+                                    <h3>물 위에 동동 카누</h3>
+                                    <p>여유롭고 안전하게 즐길수 있는 카누 체험하러 양평으로 ~
+                                    <br>진행기간:2021.04.21 - 2021.07.20
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img_box">
+                                    <img src="images/package_images/2+1.jpg" alt="경이로운2+1특가">
+                                    <span class="package_label">전체</span>
+                                </div>
+                                <div class="txt_box">
+                                    <h3>경이로운2+1특가</h3>
+                                    <p>월(원)래 목 빠지게 기다린 여행은 하루 더 즐기는 거야~ 주중에 1박하면 다음날은 반 값! 2박하면 다음 날은 무료!
+                                    <br>진행기간:2021.04.20 - 2021.07.20
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img_box">
+                                    <img src="images/package_images/popcorn.jpg" alt="Enjoy With Family">
+                                    <span class="package_label">전체</span>
+                                </div>
+                                <div class="txt_box">
+                                    <h3>Enjoy With Family</h3>
+                                    <p>가족과 함께 즐거움이 팡팡! 달콤함이 팡팡!
+                                    <br>진행기간:2021.04.19 - 2021.05.31
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img_box">
+                                    <img src="images/package_images/waterpia_trip.jpg" alt="설악에(愛) 퐁당 패키지">
+                                    <span class="package_label">설악쏘라노</span>
+                                </div>
+                                <div class="txt_box">
+                                    <h3>설악에(愛) 퐁당 패키지</h3>
+                                    <p>설악산 바라보며 워터피아에 퐁당, 든든한 아침식사와 함께 더욱 풍성한 여행~
+                                    <br>진행기간:2021.05.01 - 2021.05.13
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img_box">
+                                    <img src="images/package_images/healing_trip.jpg" alt="토닥토닥 힐링 패키지">
+                                    <span class="package_label">거제 외3곳</span>
+                                </div>
+                                <div class="txt_box">
+                                    <h3>토닥토닥 힐링 패키지</h3>
+                                    <p>지친 나에게 주는 힐링의 시간
+                                    <br>진행기간:2021.03.25 - 2021.05.30
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img_box">
+                                    <img src="images/package_images/wedding_trip.jpg" alt="My Romantic Honeymoon">
+                                    <span class="package_label">거제 외2곳</span>
+                                </div>
+                                <div class="txt_box">
+                                    <h3>My Romantic Honeymoon</h3>
+                                    <p>두근두근 로맨틱 플랜, 여행 무드 ON!
+                                    <br>진행기간: 2021.03.16 - 2021.07.23
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img_box">
+                                    <img src="images/package_images/belmel.jpg" alt="여수 벨메르 잇캉스 프로모션">
+                                    <span class="package_label">여수 벨메르</span>
+                                </div>
+                                <div class="txt_box">
+                                    <h3>여수 벨메르 잇캉스 프로모션</h3>
+                                    <p>객실 이용하면 조식뷔페가 무료 !
+                                    <br>진행기간: 2021.05.03 - 2021.06.30
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img_box">
+                                    <img src="images/package_images/family_day.jpg" alt="조이풀 패밀리 데이!">
+                                    <span class="package_label">더플라자</span>
+                                </div>
+                                <div class="txt_box">
+                                    <h3>조이풀 패밀리 데이!</h3>
+                                    <p>5월 가정의 달을 맞아 온 가족이 함께하는 룸콕 패키지여행~
+                                    <br>진행기간: 2021.04.19 - 2021.05.19
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img_box">
+                                    <img src="images/package_images/sea_sea.jpg" alt="See sea 패키지">
+                                    <span class="package_label">해운대</span>
+                                </div>
+                                <div class="txt_box">
+                                    <h3>See sea 패키지</h3>
+                                    <p>요트, 해변열차, 엘시티 스카이에서 맘 껏 바라보는 바다 여행!
+                                    <br>진행기간: 2021.03.08 - 2021.07.21
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img_box">
+                                    <img src="images/package_images/long_trip.jpg" alt="길게가면 확실한 행복! 롱~확행!">
+                                    <span class="package_label">거제 외3곳</span>
+                                </div>
+                                <div class="txt_box">
+                                    <h3>길게가면 확실한 행복! 롱~확행!</h3>
+                                    <p>한화리조트가 제안하는 슬기로운 리조트 꿀 팁!
+                                    <br>진행기간: 2021.02.25 - 2021.07.19
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img_box">
+                                    <img src="images/package_images/jeju_rikok.jpg" alt="돌코롬 리콕 패키지">
+                                    <span class="package_label">제주</span>
+                                </div>
+                                <div class="txt_box">
+                                    <h3>돌코롬 리콕 패키지</h3>
+                                    <p>언택트 리콕! 을 마음껏 누리는 한화리조트의 제주 여행 제안
+                                    <br>진행기간: 2021.03.08 - 2021.07.21
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img_box">
+                                    <img src="images/package_images/food_trip.jpg" alt="맛 봄 패키지">
+                                    <span class="package_label">더 플라자</span>
+                                </div>
+                                <div class="txt_box">
+                                    <h3>맛 봄 패키지</h3>
+                                    <p>든든~한 조식부터 분위기 낼 수 있는 와인까지 객실에서 맛 봄! 예약해 봄! 설레는 봄!
+                                    <br>진행기간: 2021.03.08 - 2021.07.22
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img_box">
+                                    <img src="images/package_images/real_vacation.jpg" alt="찐 休 패키지">
+                                    <span class="package_label">전체</span>
+                                </div>
+                                <div class="txt_box">
+                                    <h3>찐 休 패키지</h3>
+                                    <p>진정한 휴가, 진정한 휴식은 안전한 한화리조트에서 여유롭게 보내는게 찐찐찐이야!
+                                    <br>진행기간: 2021.02.25 - 2021.05.31
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img_box">
+                                    <img src="images/package_images/you_and_me.jpg" alt="2인 이용 상품 출시">
+                                    <span class="package_label">전체</span>
+                                </div>
+                                <div class="txt_box">
+                                    <h3>2인 이용 상품 출시</h3>
+                                    <p>[사전예약 전용] 단둘이 가볍게 떠나면 객실 가격도 가벼워집니다
+                                    <br>진행기간: 2021.01.05 - 2022.02.28
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <button class="btn_more" type="button">더보기</button>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            <div class="top_footer">
+                <div class="top_footer_inner">
+                    <h2 class="footer_logo"><a href="index.html"><img src="images/logo_footer.png" alt="푸터"></a></h2>
+                <ul class="footer_menu">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">채용안내</a></li>
+                    <li><a href="#">사회공헌</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                </ul>
+                </div>
+            </div>
+            <div class="bottom_footer clearfix">
+                <div class="footer_sns">
+                    <a href="#"><img src="images/ico_sns_made001.png" alt="유투브"></a>
+                    <a href="#"><img src="images/ico_sns_made002.png" alt="페북"></a>
+                    <a href="#"><img src="images/ico_sns_made003.png" alt="인스타"></a>
+                    <a href="#"><img src="images/ico_sns_made004.png" alt="블로그"></a>
+                </div>
+                <p class="addr">한화호텔앤드리조트(주)<br> 서울특별시 영등포구 63로 50(여의도동) (우)07345<br>대표자 : 문석<br>사업자등록번호 : 101-81-30747<br>통신판매업 신고번호 : 2015-서울영등포-0907<br>Tel 1588-2299 Fax 02-789-5525<br>
+                    </p>
+                <p class="copyright">Copyright@ Hanwha Hotels &amp; Resorts. All Rights Reserved.</p>
+                <div class="select_wrap">
+                    <select>
+                        <option value="">FAMILY SITE</option>
+                        <option value="#">한화그룹</option>
+                        <option value="#">한화호텔&amp;리조트</option>
+                        <option value="#">Lmembers</option>
+                        <option value="#">분양사이트</option>
+                        <option value="#">플라자CC</option>
+                        <option value="#">골든베이GR</option>
+                        <option value="#">제이드팰리스GC</option>
+                        <option value="#">사이판월드리조트</option>
+                        <option value="#">THE PLAZA</option>
+                        <option value="#">아쿠아플라넷</option>
+                        <option value="#">63스퀘어</option>
+                        <option value="#">63레스토랑</option>
+                        <option value="#">플라자웨딩</option>
+                        <option value="#">티원</option>
+                        <option value="#">멤버십사이트</option>
+                    </select>
+                </div>
+            </div>
+           <div class="top_wrap">
+               <a class="btn_top" href="#">탑버튼</a>
+           </div>
+        </footer>
+    </div>
+    <!-- 순서바뀌면안됨!!! -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/main.js?v=<?php echo time(); ?>"></script>
+</body>
+</html>

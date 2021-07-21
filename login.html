@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <!-- 모바일브라우저의 화면크기(viewport)를 장치의 가로에 맞추고 초기확대비율은 1로 하며 축소시 기본값은 0.25이므로 1로 설정 maximum-scale은 기본값으로 디바이스가 허용하는 한 확대
+    user-scalable=no는 ios에서 막혀있으므로 사용불가  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <!-- ios 전화번호형식 링크방지 -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="한화리조트 통합사이트 입니다. 객실 및 부대시설 안내, 회원권 분양, 온라인 예약, 여행정보를 제공합니다.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="hanwharesort">
+    <meta property="og:url" content="http://nanmolayo.dothome.co.kr/mHanwharesort/">
+    <meta property="og:image" content="http://nanmolayo.dothome.co.kr/mHanwharesort/images/hanwharesort_og.png">
+    <meta property="og:description" content="한화리조트 통합사이트 입니다. 객실 및 부대시설 안내, 회원권 분양, 온라인 예약, 여행정보를 제공합니다.">
+    <title>한화리조트모바일</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico?v=1">
+    <!-- 모바일 브라우저홈화면추가시 아이콘 -->
+    <link rel="apple-touch-icon" href="images/app_home.jpg">
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- 라이브러리용 css는 수정하지않으므로 타임스템프 붙이지않음 -->
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
+</head>
+<body>
+    <!-- 모바일 voice over등의 스크린 리더 사용시 필요함 -->
+    <div id="skipNavi">
+        <a href="#container">본문바로가기</a>
+    </div>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo"><a href="index.html"><img src="images/logo.png" alt="한화리조트"></a></h1>
+            <a class="btn_open" href="#">메뉴열기</a>
+            <div class="dimm"></div>
+            <aside class="gnb_box">
+                <div class="util_menu">
+                    <h2 class="logo_navigation"><a href="index.html"><img src="images/logo_navigation.png" alt="네비게이션 로고"></a></h2>
+                    <div class="welcome">
+                        <p>한화리조트를<br>방문해주셔서 감사합니다. </p>
+                    </div>
+                    <div class="login">
+                        <a href="login.html">로그인</a>
+                        <a href="#">회원가입</a>
+                    </div>
+                </div>
+                <ul class="btn_membership">
+                    <li><a href="#">H-LIVE멤버십</a></li>
+                    <li><a href="#">회원권 안내</a></li>
+                </ul>
+                <div class="gnb_wrap">
+                    <nav class="gnb">
+                        <ul class="depth1">
+                            <li>
+                                <a href="#">통합예약</a>
+                                <ul class="depth2">
+                                    <li class="double"><a href="#">온라인예약</a></li>
+                                    <li><a href="reservation.html">객실예약</a></li>
+                                    <li><a href="reservation.html">예약변경/취소</a></li>
+                                    <li><a href="reservation.html">패키지예약</a></li>
+                                    <li><a href="reservation.html">사이판월드리조트예약접수</a></li>
+                                    <li><a href="reservation.html">제휴리조트리조트예약접수</a></li>
+                                    <li><a href="reservation.html">단체행사예약</a></li>
+                                    <li><a href="reservation.html">쿠폰예약</a></li>
+                                    <li><a href="reservation.html">고객사예약</a></li>
+                                    <li><a href="reservation.html">골프예약</a></li>
+                                    <li><a href="reservation.html">렌터카예약</a></li>
+                                    <li class="double"><a href="#">분양회원추천접수</a></li>
+                                    <li><a href="#">추첨접수</a></li>
+                                    <li><a href="#">추첨접수조회/변경/취소</a></li>
+                                    <li><a href="#">추첨결과보기</a></li>
+                                    <li><a href="#">추첨일정표</a></li>
+                                    <li><a href="#">추첨접수방</a></li>
+                                    <li><a href="#">추첨배정기준</a></li>
+                                    <li><a href="#">회원서비스안내</a></li>
+                                    <li>&nbsp;</li>
+                                    <li class="double"><a href="#">잔여객실조회</a></li>
+                                    <li class="double"><a href="#">조식예약</a></li>
+                                    <li class="double"><a href="#">테마파크입장권구매</a></li>
+                                    <li class="double"><a href="#">날씨정보</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">리조트&테마파크</a>
+                                <ul class="depth2">
+                                    <li class="double"><a href="#">리조트</a></li>
+                                    <li><a href="#">거제벨버디어</a></li>
+                                    <li><a href="#">대천파로스</a></li>
+                                    <li><a href="#">산정호수안시</a></li>
+                                    <li><a href="#">설악별관</a></li>
+                                    <li><a href="#">양평</a></li>
+                                    <li><a href="#">제주</a></li>
+                                    <li><a href="#">해운대</a></li>
+                                    <li><a href="#">경주</a></li>
+                                    <li><a href="#">백암온천</a></li>
+                                    <li><a href="#">설악쏘라노</a></li>
+                                    <li><a href="#">수안보온천</a></li>
+                                    <li><a href="#">용인베잔송</a></li>
+                                    <li><a href="#">평창</a></li>
+                                    <li>&nbsp;</li>
+                                    <li class="double"><a href="#">호텔</a></li>
+                                    <li><a href="#">여수벨메르</a></li>
+                                    <li><a href="#">사이판</a></li>
+                                    <li><a href="#">더플라자</a></li>
+                                    <li>&nbsp;</li>
+                                    <li class="double"><a href="#">테마파크</a></li>
+                                    <li><a href="#">설악워터피아</a></li>
+                                    <li><a href="#">뽀로로아쿠아빌리지</a></li>
+                                    <li><a href="#">제이드가든</a></li>
+                                    <li><a href="#">아쿠아플라넷</a></li>
+                                    <li><a href="#">63스퀘어</a></li>
+                                    <li><a href="#">로얄새들승마클럽</a></li>
+                                    <li class="double"><a href="#">제휴리조트</a></li>
+                                    <li><a href="#">강원엘리시아 강촌</a></li>
+                                    <li><a href="#">제주지역 골프&리조트</a></li>
+                                    <li><a href="#">휘닉스평창</a></li>
+                                    <li>&nbsp;</li>
+                                </ul>
+                            </li>
+                            <li class="notline">
+                                <a href="#">리조트스토리</a>
+                                <ul class="depth2">
+                                    <li class="double"><a href="#">이슈 인 리조트</a></li>
+                                    <li class="double"><a href="#">마이트립플레너</a></li>
+                                    <li class="double"><a href="#">리조트 푸드트립</a></li>
+                                </ul>
+                            </li>
+                            <li class="notline">
+                                <a href="#">이벤트&패키지</a>
+                                <ul class="depth2">
+                                    <li class="double"><a href="package.html">이벤트</a></li>
+                                    <li class="double"><a href="package.html">패키지</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                   </nav>
+                   <ul class="link">
+                       <li><a href="notice.html">공지사항</a></li>
+                       <li><a href="#">예약확인/취소</a></li>
+                   </ul>
+                   <div class="lang">
+                       <a href="#">KOR</a>
+                       <a href="#">ENG</a>
+                   </div>
+                </div>
+            </aside>
+            <button class="btn_close" type="button"></button>
+        </header>
+        <div id="container" class="login_container">
+            <div class="sub_tit">
+                <h2>로그인</h2>
+            </div>
+            <div class="contents">
+                <div class="login_wrap">
+                    <div class="input_wrap">
+                        <input class="user_id" type="text" placeholder="아이디"> 
+                    </div>
+                    <div class="input_wrap">
+                        <input class="user_password" type="password" placeholder="비밀번호">
+                    </div>
+                    <div class="login_checkbox_wrap">
+                        <div class="login_checkbox">
+                            <input type="checkbox" id="save" class="blind">
+                            <label for="save">아이디저장</label>
+                        </div>
+                    </div>
+                    <button type="button" class="btn_login">로그인</button>
+                    <div class="id_find">
+                        <a href="#" class="btn_find">아이디 찾기</a>
+                        <a href="#" class="btn_find">비밀번호 찾기</a>
+                    </div>
+                </div>
+                <div class="id_sign">
+                    <p class="msg">한화리조트 회원이 아니신가요?<br>회원가입을 하시면,<br><strong>다양한 서비스</strong>를 받으실 수 있습니다.</p>
+                    <div class="btn_sign_wrap">
+                        <a href="#" class="btn_sign">회원가입</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            <div class="top_footer">
+                <div class="top_footer_inner">
+                    <h2 class="footer_logo"><a href="index.html"><img src="images/logo_footer.png" alt="푸터"></a></h2>
+                <ul class="footer_menu">
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">채용안내</a></li>
+                    <li><a href="#">사회공헌</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                </ul>
+                </div>
+            </div>
+            <div class="bottom_footer clearfix">
+                <div class="footer_sns">
+                    <a href="#"><img src="images/ico_sns_made001.png" alt="유투브"></a>
+                    <a href="#"><img src="images/ico_sns_made002.png" alt="페북"></a>
+                    <a href="#"><img src="images/ico_sns_made003.png" alt="인스타"></a>
+                    <a href="#"><img src="images/ico_sns_made004.png" alt="블로그"></a>
+                </div>
+                <p class="addr">한화호텔앤드리조트(주)<br> 서울특별시 영등포구 63로 50(여의도동) (우)07345<br>대표자 : 문석<br>사업자등록번호 : 101-81-30747<br>통신판매업 신고번호 : 2015-서울영등포-0907<br>Tel 1588-2299 Fax 02-789-5525<br>
+                    </p>
+                <p class="copyright">Copyright@ Hanwha Hotels &amp; Resorts. All Rights Reserved.</p>
+                <div class="select_wrap">
+                    <select>
+                        <option value="">FAMILY SITE</option>
+                        <option value="#">한화그룹</option>
+                        <option value="#">한화호텔&amp;리조트</option>
+                        <option value="#">Lmembers</option>
+                        <option value="#">분양사이트</option>
+                        <option value="#">플라자CC</option>
+                        <option value="#">골든베이GR</option>
+                        <option value="#">제이드팰리스GC</option>
+                        <option value="#">사이판월드리조트</option>
+                        <option value="#">THE PLAZA</option>
+                        <option value="#">아쿠아플라넷</option>
+                        <option value="#">63스퀘어</option>
+                        <option value="#">63레스토랑</option>
+                        <option value="#">플라자웨딩</option>
+                        <option value="#">티원</option>
+                        <option value="#">멤버십사이트</option>
+                    </select>
+                </div>
+            </div>
+           <div class="top_wrap">
+               <a class="btn_top" href="#">탑버튼</a>
+           </div>
+        </footer>
+    </div>
+    <!-- 순서바뀌면안됨!!! -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/main.js?v=<?php echo time(); ?>"></script>
+</body>
+</html>
